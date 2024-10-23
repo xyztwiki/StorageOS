@@ -13,17 +13,7 @@ const M: f64 = 1.0;     // Mass of the particle
     Matrix2c::new(Complex::new(0.0, 0.0), Complex::new(1.0, 0.0),
                   Complex::new(1.0, 0.0), Complex::new(0.0, 0.0))
 }
-
-fn sigma_y() -> Matrix2c {
-    Matrix2c::new(Complex::new(0.0, 0.0), Complex::new(0.0, -1.0),
-                  Complex::new(0.0, 1.0), Complex::new(0.0, 0.0))
-}
-
-fn sigma_z() -> Matrix2c {
-    Matrix2c::new(Complex::new(1.0, 0.0), Complex::new(0.0, 0.0),
-                  Complex::new(0.0, 0.0), Complex::new(-1.0, 0.0))
-}
-
+        
 // Dirac matrices
 fn alpha_x() -> Matrix4c {
     Matrix4c::new(
@@ -32,6 +22,15 @@ fn alpha_x() -> Matrix4c {
         Complex::new(0.0, 1.0), Complex::new(1.0, 0.0), Complex::new(0.0, 0.0), Complex::new(0.0, 0.0),
         Complex::new(0.0, 0.0), Complex::new(0.0, 0.0), Complex::new(0.0, 0.0), Complex::new(0.0, 0.0)
     )
+}
+fn sigma_y() -> Matrix2c {
+    Matrix2c::new(Complex::new(0.0, 0.0), Complex::new(0.0, -1.0),
+                  Complex::new(0.0, 1.0), Complex::new(0.0, 0.0))
+}
+
+fn sigma_z() -> Matrix2c {
+    Matrix2c::new(Complex::new(1.0, 0.0), Complex::new(0.0, 0.0),
+                  Complex::new(0.0, 0.0), Complex::new(-1.0, 0.0))
 }
 
 fn beta() -> Matrix4c {
