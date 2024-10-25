@@ -1,1 +1,1 @@
-Equation : Schodinger Dirac Pauli Haisenberg E= m*(c^2) 
+Equation : Schodinger Dirac Pauli Heisenberg E= m*(c^2) 
