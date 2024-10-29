@@ -1,6 +1,6 @@
 import array
 import numpy as np
-
+import tuple
 def demonstrate_array():
     print("Array Demonstration:")
     # Create an array of integers
