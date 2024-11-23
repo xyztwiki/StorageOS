@@ -57,7 +57,6 @@ void display_book(const Book* book) {
 // Function to display the entire trilogy
 void display_trilogy(const Trilogy* trilogy) {
     printf("Trilogy: %s\n", trilogy->series_name);
-    printf("====================\n");
     for (int i = 0; i < 3; i++) {
         printf("Book %d:\n", i + 1);
         display_book(&trilogy->books[i]);
