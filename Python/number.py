@@ -82,7 +82,6 @@ def demonstrate_tuple():
 
 def main():
     print("Array, NumPy, and Tuple Demonstration")
-    print("=====================================")
     demonstrate_array()
     demonstrate_numpy()
     demonstrate_tuple()
