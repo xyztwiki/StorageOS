@@ -5,7 +5,6 @@ public class IOStream{
         String inputFileName = "input.txt";
         String outputFileName = "output.txt";
 
-        // Writing to a file using OutputStream
         try (OutputStream outputStream = new FileOutputStream(outputFileName)) {
             String content = "Hello, this is a test of Java OutputStream!\n" +
                              "We're writing this content to a file.";
@@ -16,7 +15,6 @@ public class IOStream{
             System.err.println("An error occurred while writing to the file: " + e.getMessage());
         }
 
-        // Reading from a file using InputStream
         try (InputStream inputStream = new FileInputStream(inputFileName)) {
             System.out.println("\nReading from file: " + inputFileName);
             System.out.println("File content:");
@@ -29,7 +27,6 @@ public class IOStream{
             System.err.println("An error occurred while reading the file: " + e.getMessage());
         }
 
-        // Copying from input file to output file using both streams
         try (InputStream inputStream = new FileInputStream(inputFileName);
              OutputStream outputStream = new FileOutputStream(outputFileName, true)) { // Append mode
 
@@ -48,8 +45,7 @@ public class IOStream{
         } catch (IOException e) {
             System.err.println("An error occurred while copying the file: " + e.getMessage());
         }
-
-        // Reading the final output file
+        
         System.out.println("\nFinal content of " + outputFileName + ":");
         try (BufferedReader reader = new BufferedReader(new FileReader(outputFileName))) {
             String line;
